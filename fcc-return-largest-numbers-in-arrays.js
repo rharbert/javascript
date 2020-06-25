@@ -8,7 +8,6 @@ Remember, you can iterate through an array with a simple for loop, and access ea
 member with array syntax arr[i].
 */
 
-
 /*
  Step 1: Start with the smallest problem first; that is, getting the max
  from a single array.
