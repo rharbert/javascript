@@ -8,6 +8,24 @@ Remember, you can iterate through an array with a simple for loop, and access ea
 member with array syntax arr[i].
 */
 
+
+/*
+ Step 1: Start with the smallest problem first; that is, getting the max
+ from a single array.
+*/
+ function largestOfOne(arr) {
+    const maxArr = Math.max(...arr);
+    return maxArr;
+}
+
+const maxOfOne = largestOfOne([4, 6, 1, 3]);
+console.log(maxOfOne); //We verify it's working
+
+/*
+ Step 2: Use for Loop to iterate through the sub arrays, find the Math.max in each
+ sub array, and then push them to an empty array. After loop completes, return the 
+ array containing the max in each sub array.
+*/
 function largestOfFour(arr) {
     const largest = [];
 
@@ -33,13 +51,3 @@ const result = largestOfFour(
   ]
 );
 console.log(result);
-
-
-
-// Step 1: Start with the smallest problem first; that is, getting the max
-// from a single array.
-function largestOfOne(arr) {
-    const maxArr = Math.max(...arr);
-    return maxArr;
-}
-// console.log(largestOfOne([4, 6, 1, 3]));
