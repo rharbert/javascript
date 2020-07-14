@@ -30,5 +30,5 @@ console.log(sumRatings);
 var movieTitles = watchList.reduce((accumulator, currentItem) => {
   accumulator.push(currentItem.Title);
   return accumulator;
-}, []); // An empty array reprsents starting valueS
+}, []); // An empty array represents starting value
 console.log(movieTitles);
