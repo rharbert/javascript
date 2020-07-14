@@ -26,7 +26,8 @@ var array2 = [1, 2, 3];
 //In other words, it creates the functionality of ".map"
 Array.prototype.myMap = function(callbackFunction){
   var newArray = [];
-
+  //forEach element in whatever array we choose, execute the callbackFunction and push the
+  //results to newArray
   this.forEach(element => {
       //console.log(element); We used this line for verification purposes only
       newArray.push(callbackFunction(element));
