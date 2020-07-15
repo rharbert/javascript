@@ -6,8 +6,9 @@ followed by one or more arguments. Remove all elements from the initial array th
 the same value as these arguments.
 */
 
-function destroyer(arr) {
-    return arr;
+function destroyer(arr, ...args) {
+    return arr.filter(element => !args.includes(element));
   }
   
-  destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+var result = destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+console.log(result);
