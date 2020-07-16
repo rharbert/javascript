@@ -13,17 +13,23 @@ sorted in numerical order.
 Check the assertion tests for examples.
 */
 
-function uniteUnique(arr) {
+function combinedUniqueValues(arr) {
+	// For as many arguments are entered, create an array combining them all using spread operator
+	// and the "arguments" Object which natively stores all values passed to a function.
 	const allArguments = [ ...arguments ];
 	// console.log(allArguments); // Verfication only
+
+
 	const combinedArray = [];
 	
+	// For each element in the all Arguments array, push all contents to empty combinedArray
 	allArguments.forEach(e => {
 		combinedArray.push(...e)
 	})
 
 	const finalArray = [];
 
+	// For each element now in combinedArray, if it's not included in finalArray, push it
 	combinedArray.forEach(e => {
     !finalArray.includes(e) ? finalArray.push(e) : null;
 	})
@@ -31,11 +37,6 @@ function uniteUnique(arr) {
 	return finalArray;
 }
 
-var result1 = uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
-console.log(result1);
+var result = combinedUniqueValues([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+console.log(result);
 
-var result2 = uniteUnique([1, 2, 3], [5, 2, 1]);
-console.log(result2);
-
-var result3 = uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]);
-console.log(result3);
