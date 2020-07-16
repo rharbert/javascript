@@ -16,23 +16,26 @@ Check the assertion tests for examples.
 function uniteUnique(arr) {
 	const allArguments = [ ...arguments ];
 	// console.log(allArguments); // Verfication only
-	
 	const combinedArray = [];
 	
 	allArguments.forEach(e => {
 		combinedArray.push(...e)
 	})
 
+	const finalArray = [];
 
+	combinedArray.forEach(e => {
+    !finalArray.includes(e) ? finalArray.push(e) : null;
+	})
 	
-	return combinedArray;
+	return finalArray;
 }
 
 var result1 = uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
 console.log(result1);
 
-//var result2 = uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
-//console.log(result2);
+var result2 = uniteUnique([1, 2, 3], [5, 2, 1]);
+console.log(result2);
 
-//var result3 = uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
-//console.log(result3);
+var result3 = uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]);
+console.log(result3);
