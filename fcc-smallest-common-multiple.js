@@ -11,6 +11,16 @@ divisible by all numbers between 1 and 3. The answer here would be 6.
 */
 
 function smallestCommons(arr) {
+
+	const [start, end] = arr;	//Using destructuring an array
+	console.log(start, end);	//Verification
+	const diff = end - start; 
+	console.log(diff - 1 );
+
+	const range = [start, ...Array(diff).keys(), end];
+	console.log(range);
+
+
   return arr;
 }
 
