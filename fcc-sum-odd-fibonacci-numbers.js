@@ -12,6 +12,8 @@ For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less
 to 10 are 1, 1, 3, and 5.
 */
 
+
+// need to think more about what's going on here....???????
 function fibonacci(num) {
   var start = 0;
   var next = 1;

@@ -15,7 +15,7 @@ function sumPrimes(num) {
     }    
     return (x !== 1) && (x !== 0);
   }
-
+  //function that sums the prime numbers
   let i = 2;
   let sum = 0;
   while (i <= num) {

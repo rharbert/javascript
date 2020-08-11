@@ -17,8 +17,24 @@ replaced as "Dog"
 */
 
 function myReplace(str, before, after) {
-	var 
+  /* Test if 'before' is Uppercase:
+   Change first index letter of 'before' to Uppercase and compare to original first letter;
+   test if equivalent to original first letter; returns true or false */
+  var testCase = before.charAt(0).toUpperCase() === before.charAt(0);
+  /*If result of testCase is true...*/
+  if (testCase === true) {
+    /* Change first character to Uppercase and then add rest of letters of 'after' */
+    after = after.charAt(0).toUpperCase() + after.slice(1);
+  } 
+  /* Otherwise, change first character to Lowercase and then add rest of letters of 'after' */
+  else {
+    after = after.charAt(0).toLowerCase() + after.slice(1);
+  }
+  console.log(testCase, after); //Verification step
+
+  str = str.replace(before, after);
   return str;
 }
 
-myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+var result = myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+console.log(result);

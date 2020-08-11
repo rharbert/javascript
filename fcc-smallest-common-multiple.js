@@ -11,18 +11,27 @@ divisible by all numbers between 1 and 3. The answer here would be 6.
 */
 
 function smallestCommons(arr) {
+	//First, we sort the array descending
+	arr.sort(function(a,b) {
+		return b - a; 
+	});
+	//Second, Push into a new array all the numbers between index 0 and 1 in descending order (i--)
+	var newArray = [];
+	for (var i = arr[0]; i >= arr[1]; i--) {
+		newArray.push(i);
+	}
+	console.log(newArray); //Verification
 
-	const [start, end] = arr;	//Using destructuring an array
-	console.log(start, end);	//Verification
-	const diff = end - start; 
-	console.log(diff - 1 );
 
-	const range = [start, ...Array(diff).keys(), end];
-	console.log(range);
+
+
+
+
 
 
   return arr;
 }
 
 
-smallestCommons([1,5]);
+smallestCommons([1,6]);
+
