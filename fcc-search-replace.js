@@ -38,3 +38,23 @@ function myReplace(str, before, after) {
 
 var result = myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
 console.log(result);
+
+{
+//Alternative Solution
+function myReplace(str, before, after) {
+  // If the first character of 'before' is a capital...
+  if (/^[A-Z]/.test(before)) {
+    // Change the first index of 'after' to Uppercase and then add rest of letters of 'after'
+    after = after[0].toUpperCase() + after.substring(1)
+  } //Otherwise, change the first index of 'after' to Lowercase and then add rest of letters of 'after'
+  else {
+    after = after[0].toLowerCase() + after.substring(1)
+  }
+  
+  return str.replace(before, after);
+}
+
+var result = myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+console.log(result);
+
+}
